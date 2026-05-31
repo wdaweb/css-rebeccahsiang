@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>熊</title>
+    <style>
+      body {
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .taichi {
+        width: 295px;
+        height: 300px;
+        background-color: black;
+        border-radius: 50%;
+        position: relative;
+      }
+
+      .taichi::before,
+      .taichi::after {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background-color: black;
+        border-radius: 50%;
+        top: -13px;
+        border: 15px solid #010101;
+        box-shadow: inset 1px 1px 0px 50px #ffffff;
+        z-index: 1;
+      }
+      .taichi::before {
+        left: -18px;
+      }
+      .taichi::after {
+        right: -18px;
+      }
+
+      .yinyang {
+        position: absolute;
+        width: 145px;
+        height: 91px;
+        background-color: white;
+        border-radius: 50%;
+        bottom: 65px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .yinyang::before {
+        content: "";
+        width: 30px;
+        height: 22px;
+        background-color: black;
+        border-radius: 50%;
+        margin-bottom: 5px;
+      }
+
+      .yinyang::after {
+        content: "";
+        width: 70px;
+        height: 35px;
+        background-color: black;
+        border-radius: 50%;
+      }
+
+      .taichi-extra {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .cheek {
+        position: absolute;
+        width: 85px;
+        height: 76px;
+        background-color: #ff0000;
+        border-radius: 60%;
+        top: 138px;
+        left: -25px;
+        box-shadow: 280px 0 0 #ff0000;
+      }
+
+      .eye {
+        position: absolute;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        top: 80px;
+        left: 60px;
+        box-shadow:
+          125px 0 0 -18px black,
+          125px 0 0 0 white,
+          inset 0 0 0 18px white,
+          inset 0 0 0 25px black;
+      }
+
+      .v-shape {
+        position: absolute;
+        width: 99px;
+        height: 50px;
+        bottom: 29px;
+        left: 61%;
+        transform: translateX(-50%);
+      }
+
+      .v-shape::before,
+      .v-shape::after {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 27px;
+        background-color: white;
+        border-radius: 10px;
+        top: 46px;
+      }
+
+      .v-shape::before {
+        left: -50px;
+        transform: rotate(27deg);
+        transform-origin: right center;
+      }
+
+      .v-shape::after {
+        right: 7px;
+        transform: rotate(-27deg);
+        transform-origin: left center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="taichi">
+      <div class="eye"></div>
+      <div class="cheek"></div>
+      <div class="yinyang"></div>
+      <div class="v-shape"></div>
+    </div>
+  </body>
+</html>
